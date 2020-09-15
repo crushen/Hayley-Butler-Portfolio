@@ -1,5 +1,18 @@
 // font & text
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+h1 {
+  font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
   font-weight: 600;
+}
+
+// page
+.content {
+  width: 85%;
+  margin: auto;
+}
+
+.section-padding {
+  padding: 64px 0;
 }
