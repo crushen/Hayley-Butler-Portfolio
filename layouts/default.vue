@@ -4,26 +4,16 @@
   </div>
 </template>
 
-<style>
-:root {
-  --background: #171717;
-  --text: #FFF;
-}
-
+<style lang="scss">
 html {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  /* word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box; */
+  color: $light-font;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 *,
 *::before,
 *::after {
+  font-size: 16px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;

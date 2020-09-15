@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+section {
+  background: $background;
+}
 </style>

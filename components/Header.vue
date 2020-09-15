@@ -9,7 +9,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
   width: 100%;
   height: 100vh;
@@ -21,13 +21,12 @@ header {
   align-items: center;
   position: relative;
   z-index: 0;
-}
 
-h1 {
-  color: white;
-  font-size: 13vw;
-  font-weight: 800;
-  position: fixed;
-  z-index: 0;
+  h1 {
+    font-size: 13vw;
+    font-weight: 800;
+    position: fixed;
+    z-index: 0;
+  }
 }
 </style>
