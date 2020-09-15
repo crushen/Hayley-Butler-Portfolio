@@ -1,12 +1,18 @@
 <template>
-  <div class="container">
-
+  <div class="home">
+    <app-header />
+    <app-main />
   </div>
 </template>
 
 <script>
-export default {}
-</script>
+import appHeader from '@/components/Header'
+import appMain from '@/components/Main'
 
-<style>
-</style>
+export default {
+  components: {
+    appHeader,
+    appMain
+  }
+}
+</script>
