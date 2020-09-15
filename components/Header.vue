@@ -24,7 +24,6 @@ header {
 
   h1 {
     font-size: 13vw;
-    font-weight: 800;
     position: fixed;
     z-index: 0;
   }
