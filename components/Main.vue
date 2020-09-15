@@ -15,5 +15,8 @@ export default {
 </script>
 
 <style scoped>
-
+main {
+  position: relative;
+  z-index: 10;
+}
 </style>
