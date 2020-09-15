@@ -19,6 +19,17 @@ export default {
   styleResources: {
     scss: [ '~/assets/styles/variables.scss', '~/assets/styles/main.scss' ]
   },
+  router: {
+    scrollBehavior(to) {
+      if(to.hash) {
+        return window.scrollTo({ 
+          top: document.querySelector(to.hash).offsetTop + window.innerHeight,
+          behavior: 'smooth' 
+        })
+      }
+      return window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  },
   css: [],
   plugins: [],
   components: true,
