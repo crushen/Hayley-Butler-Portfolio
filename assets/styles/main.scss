@@ -7,6 +7,11 @@ h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+a {
+  color: darken($color: $light-font, $amount: 20%);
+  text-decoration: none;
+}
+
 // page
 .content {
   width: 85%;
@@ -14,5 +19,5 @@ h2, h3, h4, h5, h6 {
 }
 
 .section-padding {
-  padding: 64px 0;
+  padding: 64px 0 80px;
 }
