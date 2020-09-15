@@ -7,13 +7,14 @@
 <style lang="scss">
 html {
   color: $light-font;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+  font-weight: 400;
 }
 
 *,
 *::before,
 *::after {
-  font-size: 16px;
+  font-size: 18px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
