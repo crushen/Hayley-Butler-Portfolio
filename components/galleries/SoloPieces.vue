@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ul {
+  margin-bottom: 64px;
+}
+
 .item {
   margin-top: 64px;
 }
