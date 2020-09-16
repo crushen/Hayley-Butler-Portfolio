@@ -17,7 +17,7 @@
           <p>2019</p>
         </div>
 
-        <div class="button">
+        <div class="enquire-button">
           <a
             :href="`mailto:hayley.butler83@gmail.com?subject=${item.title}`"
             target="_blank">
@@ -39,6 +39,8 @@ export default {
 
 <style lang="scss" scoped>
 .title {
+  max-width: 450px;
+
   h3 {
     font-weight: 600;
   }
@@ -53,24 +55,9 @@ img {
   margin: 32px 0;
 }
 
-.description {
-  text-align: right;
-  
-  p {
-    font-size: 14px;
-  }
-}
-
-.button {
-  margin-top: 8px;
-  display: flex;
-  justify-content: flex-end;
-
-  a {
-    background: $background;
-    font-size: 14px;
-    color: $light-font;
-    padding: 6px 8px;
+@media screen and (min-width: 600px) {
+  img {
+    margin: 40px 0;
   }
 }
 </style>

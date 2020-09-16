@@ -55,6 +55,27 @@ ul {
   }
 }
 
+.enquire-button {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    background: $background;
+    font-size: 14px;
+    color: $light-font;
+    padding: 6px 8px;
+  }
+}
+
+.description {
+  text-align: right;
+  
+  p {
+    font-size: 14px;
+  }
+}
+
 // tablet
 @media screen and (min-width: 600px) {
   // font & text
@@ -74,6 +95,20 @@ ul {
   
     &.bottom {
       margin-bottom: 100px;
+    }
+  }
+
+  .enquire-button {
+    margin-top: 16px;
+
+    a {
+      font-size: 16px;
+    }
+  }
+
+  .description {
+    p {
+      font-size: 16px;
     }
   }
 }

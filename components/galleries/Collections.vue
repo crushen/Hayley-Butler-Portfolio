@@ -23,7 +23,7 @@
           <p>2019</p>
         </div>
 
-        <div class="button">
+        <div class="enquire-button">
           <a
             :href="`mailto:hayley.butler83@gmail.com?subject=${collection.title}`"
             target="_blank">
@@ -58,6 +58,8 @@ img {
 }
 
 .title {
+  max-width: 450px;
+
   h3 {
     font-weight: 600;
   }
@@ -68,6 +70,7 @@ img {
 }
 
 .text {
+  max-width: 450px;
   margin: 32px 0;
   font-style: italic;
 
@@ -78,36 +81,31 @@ img {
   }
 }
 
-.description {
-  text-align: right;
-  
-  p {
-    font-size: 14px;
-  }
-}
-
-.button {
-  margin-top: 8px;
-  display: flex;
-  justify-content: flex-end;
-
-  a {
-    background: $background;
-    font-size: 14px;
-    color: $light-font;
-    padding: 6px 8px;
-  }
-}
-
 .images {
   margin-top: 40px;
 
   li:not(:first-of-type) {
     margin-top: 24px;
   }
+}
 
-  figcaption {
-    font-size: 14px;
+@media screen and (min-width: 600px) {
+  .text {
+    p {
+      font-size: 18px;
+
+      &:not(:first-of-type) {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .images {
+    margin-top: 64px;
+
+    li:not(:first-of-type) {
+      margin-top: 32px;
+    }
   }
 }
 </style>
