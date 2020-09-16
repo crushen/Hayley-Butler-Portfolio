@@ -3,6 +3,7 @@
     <bio />
     <collections />
     <solo-pieces />
+    <contact />
   </main>
 </template>
 

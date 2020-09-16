@@ -1,7 +1,7 @@
 <template>
   <section id="collections" class="section-padding whole-screen">
     <div class="content">
-      <div class="gallery-title">
+      <div class="section-title">
         <h2>COLLECTIONS</h2>
         <div class="line" />
       </div>
