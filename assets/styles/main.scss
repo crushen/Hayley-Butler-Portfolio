@@ -37,12 +37,22 @@ ul {
   margin: auto;
 }
 
+.whole-screen {
+  min-height: 100vh;
+}
+
 .section-padding {
   padding: 64px 0 0;
 }
 
-.whole-screen {
-  min-height: 100vh;
+.margin {
+  &.top {
+    margin-top: 64px;
+  }
+
+  &.bottom {
+    margin-bottom: 64px;
+  }
 }
 
 // tablet
@@ -52,8 +62,18 @@ ul {
     font-size: 50px;
   }
 
-  // //page
-  // .content {
-  //   width: 75%;
-  // }
+  //page
+  .section-padding {
+    padding: 100px 0 0;
+  }
+
+  .margin {
+    &.top {
+      margin-top: 100px;
+    }
+  
+    &.bottom {
+      margin-bottom: 100px;
+    }
+  }
 }

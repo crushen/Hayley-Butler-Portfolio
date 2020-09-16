@@ -1,10 +1,10 @@
 <template>
   <section class="gallery">
-    <ul>
+    <ul class="margin bottom">
       <li
         v-for="item in soloPieces"
         :key="item.title"
-        class="item">
+        class="margin top">
         <div class="title">
           <h3>{{ item.title }}</h3>
           <h4>{{ item.subTitle }}</h4>
@@ -38,14 +38,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-ul {
-  margin-bottom: 64px;
-}
-
-.item {
-  margin-top: 64px;
-}
-
 .title {
   h3 {
     font-weight: 600;

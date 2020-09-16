@@ -6,7 +6,7 @@
         <div class="line" />
       </div>
 
-      <div class="links">
+      <div class="margin top">
         <p>Email: 
           <a href="mailto:hayley.butler83@gmail.com" target="_blank">
             hayley.butler83@gmail.com
@@ -42,10 +42,6 @@ p {
   .line {
     background: $light-font;
   }
-}
-
-.links {
-  margin-top: 64px;
 }
 
 a {

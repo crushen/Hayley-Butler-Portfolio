@@ -4,7 +4,7 @@
       <li
         v-for="collection in collections"
         :key="collection.title"
-        class="collection">
+        class="margin top">
         <div class="title">
           <h3>{{ collection.title }}</h3>
           <h4>{{ collection.subTitle }}</h4>
@@ -53,10 +53,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.collection {
-  margin-top: 64px;
-}
-
 img {
   width: 100%;
 }
