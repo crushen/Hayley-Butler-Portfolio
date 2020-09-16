@@ -1,6 +1,8 @@
 <template>
   <header :style="{backgroundImage: `url(${require('@/assets/backgrounds/dark.png')})`}">
-    <h1>Hayley <br>Betty Butler</h1>
+    <div class="content">
+      <h1>Hayley <br>Betty Butler</h1>
+    </div>
   </header>
 </template>
 
@@ -16,14 +18,16 @@ header {
   background-size: 126%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   z-index: 0;
 
+  .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
   h1 {
-    font-size: 13vw;
     position: fixed;
     z-index: 0;
   }

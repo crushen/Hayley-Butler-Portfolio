@@ -1,6 +1,7 @@
 // font & text
 h1 {
   font-weight: 700;
+  font-size: 42px;
 }
 
 h2, h3, h4, h5, h6 {
@@ -42,4 +43,16 @@ ul {
 
 .whole-screen {
   min-height: 100vh;
+}
+
+@media screen and (min-width: 600px) {
+  // font & text
+  h1 {
+    font-size: 50px;
+  }
+
+  //page
+  .content {
+    width: 75%;
+  }
 }

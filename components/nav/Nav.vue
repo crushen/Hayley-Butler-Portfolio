@@ -32,6 +32,8 @@ nav {
 
 ul {
   width: 100%;
+  max-width: 400px;
+  margin: auto;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
