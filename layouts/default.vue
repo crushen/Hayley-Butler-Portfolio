@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <app-nav />
     <Nuxt />
   </div>
@@ -29,5 +29,9 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+#app {
+  padding-bottom: 120px;
 }
 </style>

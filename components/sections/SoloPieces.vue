@@ -1,18 +1,18 @@
 <template>
-  <section id="collections" class="section-padding whole-screen">
+  <section id="solo-pieces" class="section-padding whole-screen">
     <div class="content">
       <div class="gallery-title">
-        <h2>COLLECTIONS</h2>
+        <h2>SOLO PIECES</h2>
         <div class="line" />
       </div>
 
-      <gallery :collections="collections" />
+      <gallery :soloPieces="soloPieces" />
     </div>
   </section>
 </template>
 
 <script>
-import gallery from '@/components/galleries/Collections'
+import gallery from '@/components/galleries/SoloPieces'
 import img1 from '@/assets/backgrounds/dark.png'
 import img2 from '@/assets/backgrounds/normal.png'
 
@@ -22,34 +22,16 @@ export default {
   },
   data() {
     return {
-      collections: [
+      soloPieces: [
         {
           title: 'Organa',
           subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          images: [
-            {
-              img: img1,
-              title: 'Lecur'
-            },
-            {
-              img: img2,
-              title: 'Cerebrum'
-            }
-          ]
+          img: img1,
         },
         {
           title: 'Organa',
           subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          images: [
-            {
-              img: img1,
-              title: 'Lecur'
-            },
-            {
-              img: img2,
-              title: 'Cerebrum'
-            }
-          ]
+          img: img2,
         }
       ]
     }
@@ -58,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#collections {
+#solo-pieces {
   background: $light-font;
   color: $background;
 }

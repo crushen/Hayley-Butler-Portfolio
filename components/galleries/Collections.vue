@@ -1,9 +1,10 @@
 <template>
   <section class="gallery">
-    <ul class="container">
+    <ul>
       <li
         v-for="collection in collections"
-        :key="collection.title">
+        :key="collection.title"
+        class="collection">
         <div class="title">
           <h3>{{ collection.title }}</h3>
           <h4>{{ collection.subTitle }}</h4>
@@ -52,14 +53,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  margin-top: 40px;
-  
-  li {
-    &:not(:first-of-type) {
-      margin-top: 64px;
-    }
-  }
+.collection {
+  margin-top: 64px;
 }
 
 img {
