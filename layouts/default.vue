@@ -25,7 +25,7 @@ html {
 *,
 *::before,
 *::after {
-  font-size: 18px;
+  font-size: 16px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
