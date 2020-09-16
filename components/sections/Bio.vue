@@ -34,11 +34,17 @@ section {
 
 .text {
   margin-top: 64px;
+  max-width: 450px;
 }
 
 p {
   &:not(:first-of-type) {
     margin-top: 24px;
   }
+}
+
+// tablet
+@media screen and (min-width: 600px) {
+
 }
 </style>

@@ -45,14 +45,15 @@ ul {
   min-height: 100vh;
 }
 
+// tablet
 @media screen and (min-width: 600px) {
   // font & text
   h1 {
     font-size: 50px;
   }
 
-  //page
-  .content {
-    width: 75%;
-  }
+  // //page
+  // .content {
+  //   width: 75%;
+  // }
 }

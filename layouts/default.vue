@@ -30,4 +30,13 @@ html {
   margin: 0;
   padding: 0;
 }
+
+// tablet
+@media screen and (min-width: 600px) {
+  *,
+  *::before,
+  *::after {
+    font-size: 20px;
+  }
+}
 </style>
