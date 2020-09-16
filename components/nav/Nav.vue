@@ -44,4 +44,11 @@ a {
   font-size: 12px;
   font-weight: 600;
 }
+
+// tablet
+@media screen and (min-width: 600px) {
+  nav {
+    height: 88px;
+  } 
+}
 </style>
