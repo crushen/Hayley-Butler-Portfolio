@@ -25,7 +25,7 @@ export default {
   mounted() {
     setTimeout(() => {
       document.querySelector('nav').classList.add('scale')
-    }, 2700)
+    }, 3800)
   }
 }
 </script>
@@ -38,8 +38,7 @@ nav {
   position: fixed;
   bottom: -100%;
   z-index: 50;
-  transition: cubic-bezier(.51, 1, .25, .90) 0.6s;
-  transition-delay: 1s;
+  transition: cubic-bezier(.51, 1, .25, .90) 0.4s;
 
   &.scale {
     bottom: 0;
