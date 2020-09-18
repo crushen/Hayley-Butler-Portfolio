@@ -1,5 +1,5 @@
 <template>
-  <section id="biography" class="section-padding whole-screen">
+  <section id="biography" class="section-padding bottom whole-screen">
     <div class="content">
       <div class="section-title">
         <h2>BIOGRAPHY</h2>
@@ -39,6 +39,13 @@ section {
 p {
   &:not(:first-of-type) {
     margin-top: 24px;
+  }
+}
+
+// desktop
+@media screen and (min-width: 1000px) {
+  p {
+    font-size: 24px;
   }
 }
 </style>
