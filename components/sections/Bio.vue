@@ -41,11 +41,4 @@ p {
     margin-top: 24px;
   }
 }
-
-// desktop
-@media screen and (min-width: 1000px) {
-  p {
-    font-size: 24px;
-  }
-}
 </style>
