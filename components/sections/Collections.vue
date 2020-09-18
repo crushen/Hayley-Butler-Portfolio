@@ -28,11 +28,19 @@ export default {
           subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
           images: [
             {
-              img: img1,
+              img: img2,
               title: 'Lecur'
             },
             {
               img: img2,
+              title: 'Cerebrum'
+            },
+            {
+              img: img1,
+              title: 'Lecur'
+            },
+            {
+              img: img1,
               title: 'Cerebrum'
             }
           ]
@@ -43,6 +51,14 @@ export default {
           images: [
             {
               img: img1,
+              title: 'Lecur'
+            },
+            {
+              img: img2,
+              title: 'Cerebrum'
+            },
+            {
+              img: img2,
               title: 'Lecur'
             },
             {

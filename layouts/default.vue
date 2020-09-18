@@ -1,16 +1,16 @@
 <template>
   <div>
-    <app-nav />
+    <!-- <app-nav /> -->
     <Nuxt />
   </div>
 </template>
 
 <script>
-import appNav from '@/components/nav/Nav'
+// import appNav from '@/components/nav/Nav'
 
 export default {
   components: {
-    appNav
+    // appNav
   }
 }
 </script>
