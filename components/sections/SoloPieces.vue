@@ -65,10 +65,14 @@ export default {
   color: $background;
 }
 
+.section-padding {
+  padding: 64px 0;
+}
+
 // desktop
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   .section-padding {
-    padding: 100px 0 0;
+    padding: 100px 0;
   }
 }
 </style>

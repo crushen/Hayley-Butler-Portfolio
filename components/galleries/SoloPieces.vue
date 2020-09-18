@@ -1,6 +1,6 @@
 <template>
   <section class="gallery">
-    <ul class="grid-container margin bottom">
+    <ul class="grid-container margin">
       <li
         v-for="(item, index) in soloPieces"
         :key="item.title"

@@ -20,14 +20,30 @@
   </nav>
 </template>
 
+<script>
+export default {
+  mounted() {
+    setTimeout(() => {
+      document.querySelector('nav').classList.add('scale')
+    }, 2700)
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 nav {
   width: 100%;
   height: 72px;
   background: $background;
   position: fixed;
-  bottom: 0;
+  bottom: -100%;
   z-index: 50;
+  transition: cubic-bezier(.51, 1, .25, .90) 0.6s;
+  transition-delay: 1s;
+
+  &.scale {
+    bottom: 0;
+  }
 }
 
 ul {

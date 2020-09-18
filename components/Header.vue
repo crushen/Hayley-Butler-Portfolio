@@ -1,13 +1,63 @@
 <template>
-  <header :style="{backgroundImage: `url(${require('@/assets/backgrounds/dark.png')})`}">
+  <header>
+  <img
+    src="@/assets/backgrounds/dark.png"
+    alt=""
+    class="background">
+    <div class="overlay"></div>
     <div class="content">
-      <h1>Hayley <br>Betty Butler</h1>
+      <h1>{{ output1 }} <br> {{ output2 }}</h1>
     </div>
   </header>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      text1 :'Hayley',
+      text2: 'Betty Butler',
+      output1: '',
+      output2: '',
+      i: 0
+    }
+  },
+  methods: { 
+    outText1() {
+      if (this.i < this.text1.length) {
+        this.output1 += this.text1.charAt(this.i)
+        this.i++
+        setTimeout(this.outText1, 50)
+      }
+    },
+    outText2() {
+      if (this.i < this.text2.length) {
+        this.output2 += this.text2.charAt(this.i)
+        this.i++
+        setTimeout(this.outText2, 50)
+      }
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      document.querySelector('.overlay').style.height = '100%'
+    }, 500)
+
+    setTimeout(() => {
+      this.i = 0
+      this.outText1()
+    }, 1000)
+
+    setTimeout(() => {
+      this.i = 0
+      this.outText2()
+    }, 1500)
+
+    setTimeout(() => {
+      document.querySelector('.overlay').style.height = '0'
+      document.querySelector('.background').classList.add('scale')
+    }, 2700)
+  }
 }
 </script>
 
@@ -15,21 +65,42 @@ export default {
 header {
   width: 100%;
   height: 100vh;
-  background-size: 126%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   position: relative;
-  z-index: 0;
+
+  .background {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    transform: scale(1.3);
+    transition: cubic-bezier(.51, 1, .25, .90) 0.6s;
+
+    &.scale {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .overlay {
+    width: 100%;
+    height: 0;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: cubic-bezier(.51, 1, .25, .90) 0.6s;
+  }
 
   .content {
-    height: 100%;
-    display: flex;
-    align-items: center;
+    padding-top: 35vh;
   }
 
   h1 {
     position: fixed;
-    z-index: 0;
+    z-index: 10;
   }
 }
 </style>
