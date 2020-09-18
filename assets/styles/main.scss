@@ -34,6 +34,7 @@ ul {
 // page
 .content {
   width: 85%;
+  max-width: 1050px;
   margin: auto;
 }
 
@@ -80,7 +81,7 @@ ul {
 @media screen and (min-width: 600px) {
   // font & text
   h1 {
-    font-size: 50px;
+    font-size: 64px;
   }
 
   //page
@@ -110,5 +111,13 @@ ul {
     p {
       font-size: 16px;
     }
+  }
+}
+
+// desktop
+@media screen and (min-width: 1000px) {
+  // font & text
+  h1 {
+    font-size: 80px;
   }
 }
