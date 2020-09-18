@@ -72,6 +72,8 @@ export default {
   font-style: italic;
 
   p {
+    font-size: 14px;
+
     &:not(:first-of-type) {
       margin-top: 8px;
     }
@@ -91,7 +93,7 @@ img {
 @media screen and (min-width: 600px) {
   .text {
     p {
-      font-size: 18px;
+      font-size: 16px;
 
       &:not(:first-of-type) {
         margin-top: 16px;
