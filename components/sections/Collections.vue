@@ -78,4 +78,11 @@ export default {
   background: $light-font;
   color: $background;
 }
+
+// desktop
+@media screen and (min-width: 1000px) {
+  .section-padding {
+    padding: 100px 0;
+  }
+}
 </style>

@@ -32,7 +32,7 @@ nav {
 
 ul {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   margin: auto;
   height: 100%;
   display: flex;
@@ -48,7 +48,7 @@ a {
 // tablet
 @media screen and (min-width: 600px) {
   nav {
-    height: 88px;
+    height: 80px;
   } 
 }
 </style>
