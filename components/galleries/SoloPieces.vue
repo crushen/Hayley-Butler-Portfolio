@@ -1,16 +1,22 @@
 <template>
   <section class="gallery">
-    <ul class="margin bottom">
+    <ul class="grid-container margin bottom">
       <li
-        v-for="item in soloPieces"
+        v-for="(item, index) in soloPieces"
         :key="item.title"
-        class="margin top">
-        <div class="title">
+        class="grid margin top"
+        :class="`item-${index + 2}`">
+        <div class="title small">
           <h3>{{ item.title }}</h3>
           <h4>{{ item.subTitle }}</h4>
         </div>
 
         <img :src="item.img" alt="">
+
+        <div class="title big">
+          <h3>{{ item.title }}</h3>
+          <h4>{{ item.subTitle }}</h4>
+        </div>
 
         <div class="description">
           <p>Alcohol Ink on Yupo Paper</p>
@@ -41,6 +47,10 @@ export default {
 .title {
   max-width: 450px;
 
+  &.big {
+    display: none;
+  }
+
   h3 {
     font-weight: 600;
   }
@@ -55,9 +65,67 @@ img {
   margin: 32px 0;
 }
 
+// tablet
 @media screen and (min-width: 600px) {
   img {
     margin: 40px 0;
+  }
+}
+
+// desktop
+@media screen and (min-width: 1000px) {
+  .title {
+    max-width: 450px;
+
+    &.big {
+      display: block;
+    }
+
+    &.small {
+      display: none;
+    }
+
+    h3 {
+      margin-top: 16px;
+    }
+
+    h4 {
+      margin: 8px 0 24px 0;
+    }
+  }
+
+  img {
+    margin: 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 80px;
+
+    // &:not(:first-of-type) {
+    //   &.margin {
+    //     &.top {
+    //       margin-top: 200px;
+    //     }
+    //   }
+    // }
+  }
+
+  .grid {
+    margin: 0;
+    align-self: end;
+
+    // &.item-1 {
+    //   grid-column: 1 / 4;
+    // }
+
+    // &.item-2 {
+    //   grid-column: 4 / 7;
+    //   margin: 0;
+    //   padding-left: 40px;
+    // }
   }
 }
 </style>

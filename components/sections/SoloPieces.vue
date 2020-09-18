@@ -32,6 +32,26 @@ export default {
           title: 'Organa',
           subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
           img: img2,
+        },
+        {
+          title: 'Organa',
+          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
+          img: img1,
+        },
+        {
+          title: 'Organa',
+          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
+          img: img2,
+        },
+        {
+          title: 'Organa',
+          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
+          img: img1,
+        },
+        {
+          title: 'Organa',
+          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
+          img: img2,
         }
       ]
     }
