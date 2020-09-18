@@ -137,6 +137,7 @@ img {
     &.item-2 {
       grid-column: 4 / 7;
       margin: 0;
+      padding-left: 40px;
     }
 
     // &:nth-of-type(3n) {
