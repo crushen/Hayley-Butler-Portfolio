@@ -1,10 +1,7 @@
 <template>
   <header>
-  <img
-    src="@/assets/backgrounds/dark.png"
-    alt=""
-    class="background">
-    <div class="overlay"></div>
+    <div class="background" :style="{backgroundImage: `url(${require('@/assets/backgrounds/dark.png')})`}" />
+    <div class="overlay" />
     <div class="content">
       <h1>{{ output1 }} <br> {{ output2 }}</h1>
     </div>
@@ -69,7 +66,11 @@ header {
 
   .background {
     width: 100%;
-    position: fixed;
+    height: 100vh;
+    background-size: 126%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 0;

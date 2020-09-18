@@ -20,6 +20,7 @@ html {
   color: $light-font;
   font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 *,
@@ -29,6 +30,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 // tablet
