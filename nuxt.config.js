@@ -11,6 +11,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600;700&display=swap' }
+      // { rel: 'stylesheet', href: 'https://unpkg.com/aos@next/dist/aos.css' }
     ]
   },
   modules: [
@@ -30,8 +31,8 @@ export default {
       return window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   },
-  css: [],
-  plugins: [],
+  css: [ 'aos/dist/aos.css' ],
+  plugins: [{ src: '~/plugins/aos.js', mode: 'client'}],
   components: true,
   buildModules: [],
   build: {}
