@@ -25,9 +25,10 @@ ul {
   }
 
   .line {
-    width: 100%;
+    width: 0;
     height: 1px;
     background: $background;
+    transition: cubic-bezier(.51, 1, .25, .90) 0.6s;
   }
 }
 

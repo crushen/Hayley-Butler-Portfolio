@@ -11,6 +11,19 @@ import appNav from '@/components/nav/Nav'
 export default {
   components: {
     appNav
+  },
+  mounted() {
+    window.addEventListener('scroll', () => {
+      const lines = document.querySelectorAll('.line')
+
+      lines.forEach(line => {
+        line.distanceToTop = line.getBoundingClientRect().top
+
+        if(line.distanceToTop < 500) {
+          line.style.width = '100%'
+        }
+      })
+    })
   }
 }
 </script>
