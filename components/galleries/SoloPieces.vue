@@ -103,29 +103,11 @@ img {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 80px;
-
-    // &:not(:first-of-type) {
-    //   &.margin {
-    //     &.top {
-    //       margin-top: 200px;
-    //     }
-    //   }
-    // }
   }
 
   .grid {
     margin: 0;
     align-self: end;
-
-    // &.item-1 {
-    //   grid-column: 1 / 4;
-    // }
-
-    // &.item-2 {
-    //   grid-column: 4 / 7;
-    //   margin: 0;
-    //   padding-left: 40px;
-    // }
   }
 }
 </style>
