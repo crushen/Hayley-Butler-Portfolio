@@ -30,10 +30,14 @@ export default {
         if(this.innerWidth <= 600) {
           if(line.distanceToTop < 500) {
             line.style.width = '100%'
+          } else {
+            line.style.width = '0'
           }
         } else {
           if(line.distanceToTop < 600) {
             line.style.width = '100%'
+          } else {
+            line.style.width = '0'
           }
         }
       })
