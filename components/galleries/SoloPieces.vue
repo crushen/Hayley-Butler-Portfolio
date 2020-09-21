@@ -104,11 +104,20 @@ img {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 80px;
+    margin-top: 100px;
   }
 
   .grid {
-    margin: 0;
-    align-self: end;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .margin {
+    &.top {
+      margin-top: 0;
+    }
   }
 }
 </style>
