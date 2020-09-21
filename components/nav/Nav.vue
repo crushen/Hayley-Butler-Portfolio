@@ -25,7 +25,7 @@ export default {
   mounted() {
     setTimeout(() => {
       document.querySelector('nav').classList.add('scale')
-    }, 3800)
+    }, 3500)
   }
 }
 </script>
