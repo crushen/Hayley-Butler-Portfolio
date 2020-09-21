@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="background" :style="{backgroundImage: `url(${require('@/assets/backgrounds/dark.png')})`}" />
+    <div class="background" :style="{backgroundImage: `url(${require('@/assets/backgrounds/dark.webp')})`}" />
     <div class="overlay" />
     <div class="content">
       <h1>{{ output1 }} <br> {{ output2 }}</h1>
