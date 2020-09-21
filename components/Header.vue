@@ -63,6 +63,7 @@ header {
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
 
   .background {
     width: 100%;

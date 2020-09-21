@@ -5,7 +5,9 @@
         v-for="collection in collections"
         :key="collection.title"
         class="grid-container margin top">
-        <div class="grid item-1">
+        <div
+          class="grid item-1"
+          data-aos="custom-animation">
           <div class="title">
             <h3>{{ collection.title }}</h3>
             <h4>{{ collection.subTitle }}</h4>
@@ -39,7 +41,8 @@
           :src="image.img"
           alt=""
           class="grid"
-          :class="`item-${index + 2}`">
+          :class="`item-${index + 2}`"
+          data-aos="custom-animation">
       </li>
     </ul>
   </section>

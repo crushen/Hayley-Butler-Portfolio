@@ -6,7 +6,7 @@
         <div class="line" />
       </div>
 
-      <div class="margin top">
+      <div class="margin top" data-aos="custom-animation">
         <p>Email: 
           <a href="mailto:hayley.butler83@gmail.com" target="_blank">
             hayley.butler83@gmail.com

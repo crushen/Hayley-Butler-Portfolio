@@ -33,7 +33,7 @@ html {
   color: $light-font;
   font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
   font-weight: 400;
-  //overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 *,
@@ -44,6 +44,28 @@ html {
   margin: 0;
   padding: 0;
   //overflow-x: hidden;
+}
+
+[data-aos="custom-animation"] {
+  transform: translateY(32px);
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  // @media screen and (min-width: 768px) {
+
+  // }
+}
+
+[data-aos] {
+  body[data-aos-easing="custom-easing"] &,
+  &[data-aos][data-aos-easing="custom-easing"] {
+    transition-timing-function: cubic-bezier(.51, 1, .25, .90);
+  }
 }
 
 // tablet

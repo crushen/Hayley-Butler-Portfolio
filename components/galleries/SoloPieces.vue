@@ -5,7 +5,8 @@
         v-for="(item, index) in soloPieces"
         :key="item.title"
         class="grid margin top"
-        :class="`item-${index + 2}`">
+        :class="`item-${index + 2}`"
+        data-aos="custom-animation">
         <div class="title small">
           <h3>{{ item.title }}</h3>
           <h4>{{ item.subTitle }}</h4>
