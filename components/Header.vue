@@ -36,24 +36,31 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      document.querySelector('.overlay').style.height = '100%'
-    }, 500)
+    if(this.$route.fullPath === '/') {
+      setTimeout(() => {
+        document.querySelector('.overlay').style.height = '100%'
+      }, 500)
 
-    setTimeout(() => {
-      this.i = 0
-      this.outText1()
-    }, 1000)
+      setTimeout(() => {
+        this.i = 0
+        this.outText1()
+      }, 1000)
 
-    setTimeout(() => {
-      this.i = 0
-      this.outText2()
-    }, 1500)
+      setTimeout(() => {
+        this.i = 0
+        this.outText2()
+      }, 1500)
 
-    setTimeout(() => {
-      document.querySelector('.overlay').style.height = '0'
-      document.querySelector('.background').classList.add('scale')
-    }, 2700)
+      setTimeout(() => {
+        document.querySelector('.overlay').style.height = '0'
+        document.querySelector('.background').classList.add('scale')
+      }, 2700)
+    } else {
+      this.output1 = this.text1
+      this.output2 = this.text2
+
+      document.querySelector('.background').classList.add('scale')      
+    }
   }
 }
 </script>

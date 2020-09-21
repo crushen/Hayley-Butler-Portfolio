@@ -23,9 +23,13 @@
 <script>
 export default {
   mounted() {
-    setTimeout(() => {
+    if(this.$route.fullPath === '/') {
+      setTimeout(() => {
+        document.querySelector('nav').classList.add('scale')
+      }, 3500)
+    } else {
       document.querySelector('nav').classList.add('scale')
-    }, 3500)
+    }
   }
 }
 </script>
