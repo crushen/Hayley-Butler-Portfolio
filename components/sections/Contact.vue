@@ -7,16 +7,8 @@
       </div>
 
       <div class="margin top" data-aos="custom-animation">
-        <p>Email: 
-          <a href="mailto:hayley.butler83@gmail.com" target="_blank">
-            hayley.butler83@gmail.com
-          </a>
-        </p>
-        <p>Instagram: 
-          <a href="https://www.instagram.com/hayloveart/?hl=en" target="_blank">
-            @hayloveart
-          </a>
-        </p>  
+        <p>Email: <a href="mailto:hayley.butler83@gmail.com" target="_blank">hayley.butler83@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/hayloveart/?hl=en" target="_blank">@hayloveart</a></p>  
       </div>
     </div>
   </section>
