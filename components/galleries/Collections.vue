@@ -3,7 +3,7 @@
     <ul>
       <li
         v-for="collection in collections"
-        :key="collection.title"
+        :key="collection.id"
         class="grid-container margin top">
         <div
           class="grid item-1"
@@ -13,17 +13,14 @@
             <h4>{{ collection.subTitle }}</h4>
           </div>
 
-          <div class="text">
-            <p>What if I took it all out?</p>
-            <p>What if I placed every piece of me on the table and you could inspect each and every pumping vessel?</p>
-            <p>How vulnerable I would be laying there.</p>
-            <p>An empty carcass. Nothing more than a shell.</p>
-            <p>Did you know how fragile I am? Did you smell my weakness? Can you see it now?</p>
+          <div
+            v-if="collection.description"
+            class="text">
+            <p>{{ collection.description }}</p>
           </div>
 
           <div class="description">
-            <p>Alcohol Ink on Yupo Paper</p>
-            <p>2019</p>
+            <p>{{ collection.details }}</p>
           </div>
 
           <div class="enquire-button">
@@ -37,8 +34,8 @@
 
         <img
           v-for="(image, index) in collection.images"
-          :key="index"
-          :src="image.img"
+          :key="image.id"
+          :src="image.url"
           alt=""
           class="grid"
           :class="`item-${index + 2}`"

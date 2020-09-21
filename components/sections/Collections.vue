@@ -6,69 +6,24 @@
         <div class="line" />
       </div>
 
-      <gallery :collections="collections" />
+      <gallery v-if="collections" :collections="collections" />
     </div>
   </section>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import gallery from '@/components/galleries/Collections'
-import img1 from '@/assets/backgrounds/dark.png'
-import img2 from '@/assets/backgrounds/normal.png'
 
 export default {
   components: {
     gallery
   },
-  data() {
-    return {
-      collections: [
-        {
-          title: 'Organa',
-          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          images: [
-            {
-              img: img2,
-              title: 'Lecur'
-            },
-            {
-              img: img2,
-              title: 'Cerebrum'
-            },
-            {
-              img: img1,
-              title: 'Lecur'
-            },
-            {
-              img: img1,
-              title: 'Cerebrum'
-            }
-          ]
-        },
-        {
-          title: 'Organa',
-          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          images: [
-            {
-              img: img1,
-              title: 'Lecur'
-            },
-            {
-              img: img2,
-              title: 'Cerebrum'
-            },
-            {
-              img: img2,
-              title: 'Lecur'
-            },
-            {
-              img: img2,
-              title: 'Cerebrum'
-            }
-          ]
-        }
-      ]
-    }
+  computed: {
+    ...mapState(['collections'])
+  },
+  mounted() {
+    this.$store.dispatch('getCollections')
   }
 }
 </script>

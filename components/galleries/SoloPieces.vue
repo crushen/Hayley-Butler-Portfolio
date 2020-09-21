@@ -3,7 +3,7 @@
     <ul class="grid-container margin">
       <li
         v-for="(item, index) in soloPieces"
-        :key="item.title"
+        :key="item.id"
         class="grid margin top"
         :class="`item-${index + 2}`"
         data-aos="custom-animation">
@@ -12,7 +12,7 @@
           <h4>{{ item.subTitle }}</h4>
         </div>
 
-        <img :src="item.img" alt="">
+        <img :src="item.image.url" alt="">
 
         <div class="title big">
           <h3>{{ item.title }}</h3>
@@ -20,8 +20,7 @@
         </div>
 
         <div class="description">
-          <p>Alcohol Ink on Yupo Paper</p>
-          <p>2019</p>
+          <p>{{ item.details }}</p>
         </div>
 
         <div class="enquire-button">

@@ -6,55 +6,24 @@
         <div class="line" />
       </div>
 
-      <gallery :soloPieces="soloPieces" />
+      <gallery v-if="soloPieces" :soloPieces="soloPieces" />
     </div>
   </section>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import gallery from '@/components/galleries/SoloPieces'
-import img1 from '@/assets/backgrounds/dark.png'
-import img2 from '@/assets/backgrounds/normal.png'
 
 export default {
   components: {
     gallery
   },
-  data() {
-    return {
-      soloPieces: [
-        {
-          title: 'Organa',
-          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          img: img1,
-        },
-        {
-          title: 'Organa',
-          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          img: img2,
-        },
-        {
-          title: 'Organa',
-          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          img: img1,
-        },
-        {
-          title: 'Organa',
-          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          img: img2,
-        },
-        {
-          title: 'Organa',
-          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          img: img1,
-        },
-        {
-          title: 'Organa',
-          subTitle: 'A study on how delicate and vulnerable we are. Looking at the inside out.',
-          img: img2,
-        }
-      ]
-    }
+  computed: {
+    ...mapState(['soloPieces'])
+  },
+  mounted() {
+    this.$store.dispatch('getSoloPieces')
   }
 }
 </script>
