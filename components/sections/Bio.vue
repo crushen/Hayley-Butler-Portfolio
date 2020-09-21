@@ -9,17 +9,22 @@
       <div
         class="text margin top"
         data-aos="custom-animation">
-        <p>A South London artist, singer/songwriter. Working with a variety of mediums to create pieces of work that explore emotion, colour, texture and light.</p> 
-        <p>Her art, words and music interrogate what it is to be human.</p>
-        <p>A South London artist, singer/songwriter. Working with a variety of mediums to create pieces of work that explore emotion, colour, texture and light.</p> 
-        <p>Her art, words and music interrogate what it is to be human.</p> 
+        <p v-if="biography">{{ biography.text }}</p> 
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
+  computed: {
+    ...mapState(['biography'])
+  },
+  mounted() {
+    this.$store.dispatch('getBiography')
+  }
 }
 </script>
 
@@ -38,9 +43,7 @@ export default {
   max-width: 450px;
 }
 
-p {
-  &:not(:first-of-type) {
-    margin-top: 24px;
-  }
+/deep/ p {
+  white-space: pre-wrap;
 }
 </style>
