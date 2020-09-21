@@ -31,6 +31,7 @@ export default {
 <style lang="scss" scoped>
 #biography {
   background: $background;
+  color: $light-font;
 }
 
 .section-title {

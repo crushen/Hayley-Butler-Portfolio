@@ -108,6 +108,7 @@ header {
   }
 
   h1 {
+    color: $light-font;
     position: fixed;
     z-index: 10;
   }

@@ -26,7 +26,8 @@
           <div class="enquire-button">
             <a
               :href="`mailto:hayley.butler83@gmail.com?subject=${collection.title}`"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Enquire
             </a>
           </div>
@@ -59,10 +60,12 @@ export default {
 
   h3 {
     font-weight: 600;
+    color: $background;
   }
 
   h4 {
     margin-top: 8px;
+    color: $background;
   }
 }
 
@@ -73,6 +76,7 @@ export default {
 
   p {
     font-size: 14px;
+    color: $background;
 
     &:not(:first-of-type) {
       margin-top: 8px;
