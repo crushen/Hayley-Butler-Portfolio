@@ -12,15 +12,29 @@ export default {
   components: {
     appNav
   },
+  data() {
+    return {
+      innerWidth: null
+    }
+  },
   mounted() {
+    this.innerWidth = window.innerWidth
+    window.addEventListener('resize', () => {
+      this.innerWidth = window.innerWidth
+    })
+
     window.addEventListener('scroll', () => {
       const lines = document.querySelectorAll('.line')
-
       lines.forEach(line => {
         line.distanceToTop = line.getBoundingClientRect().top
-
-        if(line.distanceToTop < 500) {
-          line.style.width = '100%'
+        if(this.innerWidth <= 600) {
+          if(line.distanceToTop < 500) {
+            line.style.width = '100%'
+          }
+        } else {
+          if(line.distanceToTop < 600) {
+            line.style.width = '100%'
+          }
         }
       })
     })
