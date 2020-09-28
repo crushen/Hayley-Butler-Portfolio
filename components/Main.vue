@@ -3,6 +3,7 @@
     <bio />
     <solo-pieces />
     <collections />
+    <exhibitions />
     <contact />
   </main>
 </template>
@@ -11,12 +12,14 @@
 import bio from '@/components/sections/Bio'
 import soloPieces from '@/components/sections/SoloPieces'
 import collections from '@/components/sections/Collections'
+import exhibitions from '@/components/sections/Exhibitions'
 
 export default {
   components: {
     bio,
     soloPieces,
-    collections
+    collections,
+    exhibitions
   }
 }
 </script>

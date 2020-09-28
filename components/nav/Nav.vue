@@ -14,6 +14,10 @@
       </li>
 
       <li>
+        <nuxt-link :to="{ path: '/', hash:'#exhibitions'}">Exhibitions</nuxt-link>
+      </li>
+
+      <li>
         <nuxt-link :to="{ path: '/', hash:'#contact'}">Contact</nuxt-link>
       </li>
     </ul>
@@ -51,7 +55,7 @@ nav {
 
 ul {
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   margin: auto;
   height: 100%;
   display: flex;
@@ -60,7 +64,7 @@ ul {
 }
 
 a {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
 }
 
@@ -69,5 +73,10 @@ a {
   nav {
     height: 80px;
   } 
+
+  a {
+    font-size: 12px;
+    font-weight: 600;
+  }
 }
 </style>
