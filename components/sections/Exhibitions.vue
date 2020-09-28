@@ -1,5 +1,5 @@
 <template>
-  <section id="exhibitions" class="section-padding whole-screen">
+  <section id="exhibitions" class="section-padding bottom whole-screen light-page">
     <div class="content">
       <div class="section-title">
         <h2>EXHIBITIONS</h2>
@@ -27,17 +27,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-#exhibitions {
-  background: $light-font;
-  color: $background;
-}
-
-// desktop
-@media screen and (min-width: 1000px) {
-  .section-padding {
-    padding: 100px 0;
-  }
-}
-</style>

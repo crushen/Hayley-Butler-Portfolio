@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 ul {
   list-style: none;
 }
@@ -43,16 +47,22 @@ ul {
   margin: auto;
 }
 
+.light-page {
+  background: $light-font;
+  color: $background;
+}
+
+.dark-page {
+  background: $background;
+  color: $light-font;
+}
+
 .whole-screen {
   min-height: 100vh;
 }
 
 .section-padding {
-  padding: 64px 0 0;
-
-  &.bottom {
-    padding: 64px 0;
-  }
+  padding: 64px 0;
 }
 
 .margin {
@@ -95,11 +105,7 @@ ul {
 
   //page
   .section-padding {
-    padding: 100px 0 0;
-
-    &.bottom {
-      padding: 100px 0;
-    }
+    padding: 100px 0;
   }
 
   .margin {

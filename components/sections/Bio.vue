@@ -1,5 +1,5 @@
 <template>
-  <section id="biography" class="section-padding bottom whole-screen">
+  <section id="biography" class="section-padding bottom whole-screen dark-page">
     <div class="content">
       <div class="section-title">
         <h2>BIOGRAPHY</h2>
@@ -29,11 +29,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#biography {
-  background: $background;
-  color: $light-font;
-}
-
 .section-title {
   .line {
     background: $light-font;
