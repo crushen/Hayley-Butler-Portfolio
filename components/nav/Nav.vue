@@ -6,11 +6,11 @@
       </li>
 
       <li>
-        <nuxt-link :to="{ path: '/', hash:'#collections'}">Collections</nuxt-link>
+        <nuxt-link :to="{ path: '/', hash:'#solo-pieces'}">Solo Pieces</nuxt-link>
       </li>
 
       <li>
-        <nuxt-link :to="{ path: '/', hash:'#solo-pieces'}">Solo Pieces</nuxt-link>
+        <nuxt-link :to="{ path: '/', hash:'#collections'}">Collections</nuxt-link>
       </li>
 
       <li>
