@@ -15,7 +15,7 @@
           <p>Phone: <a href="tel:07429545446" target="_blank" rel="noopener">07429545446</a></p>
           <p>Email: <a href="mailto:hayleybettybutler@gmail.com" target="_blank" rel="noopener">hayleybettybutler@gmail.com</a></p>
           <p>Instagram: <a href="https://www.instagram.com/hayloveart/?hl=en" target="_blank" rel="noopener">@hayloveart</a></p>
-          <p>LinkedIn: <a href="https://www.instagram.com/hayloveart/?hl=en" target="_blank" rel="noopener">@hayloveart</a></p>  
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/hayleybutler83/?originalSubdomain=uk" target="_blank" rel="noopener">@HayleyButler</a></p>  
         </div>
 
         <div class="developer-link">
