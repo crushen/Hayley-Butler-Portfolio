@@ -85,6 +85,14 @@ ul {
     font-size: 14px;
     color: $light-font;
     padding: 6px 8px;
+    transition: 0.2s;
+    border: 1px solid $background;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    background: none;
+    color: $background;
   }
 }
 

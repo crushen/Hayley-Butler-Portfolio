@@ -93,6 +93,10 @@ img {
   }
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 // tablet
 @media screen and (min-width: 600px) {
   .text {
