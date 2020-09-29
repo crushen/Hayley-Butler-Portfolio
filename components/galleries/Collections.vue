@@ -25,7 +25,7 @@
 
           <div class="enquire-button">
             <a
-              :href="`mailto:hayley.butler83@gmail.com?subject=${collection.title}`"
+              :href="`mailto:hayleybettybutler@gmail.com?subject=${collection.title}`"
               target="_blank"
               rel="noopener">
               Enquire
