@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="background" :style="{backgroundImage: `url(${require('@/assets/backgrounds/dark.webp')})`}" />
+    <div class="background" :style="{backgroundImage: `url(${require('@/assets/backgrounds/background.webp')})`}" />
     <div class="overlay" />
 
     <div class="content">
@@ -80,7 +80,8 @@ header {
   .background {
     width: 100%;
     height: 100vh;
-    background-size: 126%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: absolute;
