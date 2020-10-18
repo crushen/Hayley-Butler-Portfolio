@@ -80,6 +80,15 @@ html {
   }
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: 0.3s;
+}
+.fade-enter, 
+.fade-leave-to {
+  opacity: 0;
+}
+
 // tablet
 @media screen and (min-width: 600px) {
   *,

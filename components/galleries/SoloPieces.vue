@@ -12,7 +12,7 @@
           <h4>{{ item.subTitle }}</h4>
         </div>
 
-        <img :src="item.image.url" alt="">
+        <img @click="$emit('openModal')" :src="item.image.url" alt="">
 
         <div class="title big">
           <h3>{{ item.title }}</h3>
