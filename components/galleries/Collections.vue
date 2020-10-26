@@ -1,5 +1,12 @@
 <template>
   <section class="gallery">
+    <transition name="fade" mode="out-in">
+      <image-modal
+        v-if="images.length"
+        :images="images"
+        @close="images = []" />
+    </transition>
+
     <ul>
       <li
         v-for="collection in collections"
@@ -18,9 +25,28 @@
             class="text">
             <p>{{ collection.description }}</p>
           </div>
+        </div>
+
+        <div
+          v-for="(image, index) in collection.image"
+          :key="image.id"
+          class="grid margin top"
+          :class="`item-${index + 2}`"
+          data-aos="custom-animation">
+          <div class="title small">
+            <h3>{{ image.title }}</h3>
+            <h4>{{ image.subTitle }}</h4>
+          </div>
+
+          <img @click="images = image.images" :src="image.images[0].url" alt="">
+
+          <div class="title big">
+            <h3>{{ image.title }}</h3>
+            <h4>{{ image.subTitle }}</h4>
+          </div>
 
           <div class="description">
-            <p>{{ collection.details }}</p>
+            <p>{{ image.details }}</p>
           </div>
 
           <div class="enquire-button">
@@ -32,24 +58,23 @@
             </a>
           </div>
         </div>
-
-        <img
-          v-for="(image, index) in collection.images"
-          :key="image.id"
-          :src="image.url"
-          alt=""
-          class="grid"
-          :class="`item-${index + 2}`"
-          data-aos="custom-animation">
       </li>
     </ul>
   </section>
 </template>
 
 <script>
+import imageModal from '@/components/modals/ImageModal'
+
 export default {
   props: {
     collections: { required: true, type: Array }
+  },
+  components: { imageModal },
+  data() {
+    return {
+      images: []
+    }
   }
 }
 </script>
@@ -86,11 +111,7 @@ export default {
 
 img {
   width: 100%;
-  margin-top: 24px;
-
-  &:first-of-type {
-    margin-top: 40px;
-  }
+  margin: 32px 0;
 }
 
 // tablet
@@ -106,11 +127,7 @@ img {
   }
 
   img {
-    margin-top: 32px;
-
-    &:first-of-type {
-      margin-top: 64px;
-    }
+    margin: 40px 0;
   }
 }
 
@@ -133,10 +150,11 @@ img {
 
   .grid {
     margin: 0;
-    align-self: start;
+    align-self: end;
     grid-column: span 2;
 
     &.item-1 {
+      align-self: start;
       grid-column: 1 / 4;
     }
 
@@ -146,9 +164,19 @@ img {
       padding-left: 40px;
     }
 
+    &.margin {
+      &.top {
+        margin: 0;
+      }
+    }
+
     // &:nth-of-type(3n) {
     //   margin-top: 80px;
     // }
+  }
+
+  img {
+    margin: 0;
   }
 }
 </style>

@@ -75,6 +75,24 @@ ul {
   }
 }
 
+.title {
+  max-width: 450px;
+
+  &.big {
+    display: none;
+  }
+
+  h3 {
+    font-weight: 600;
+    color: $background;
+  }
+
+  h4 {
+    margin-top: 8px;
+    color: $background;
+  }
+}
+
 .enquire-button {
   margin-top: 8px;
   display: flex;
@@ -136,5 +154,25 @@ ul {
   // font & text
   h1 {
     font-size: 80px;
+  }
+
+  .title {
+    max-width: 450px;
+
+    &.big {
+      display: block;
+    }
+
+    &.small {
+      display: none;
+    }
+
+    h3 {
+      margin-top: 16px;
+    }
+
+    h4 {
+      margin: 8px 0 24px 0;
+    }
   }
 }

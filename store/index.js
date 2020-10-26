@@ -40,15 +40,20 @@ export const actions = {
             query: `
               {
                 collections {
-                  title
-                  subTitle
-                  images {
-                    url
-                    id
-                  }
-                  id
                   description
-                  details
+                  id
+                  subTitle
+                  title
+                  image {
+                    title
+                    subTitle
+                    id
+                    details
+                    images {
+                      id
+                      url
+                    }
+                  }
                 }
               }
             `
@@ -71,13 +76,16 @@ export const actions = {
             query: `
               {
                 soloPieces {
-                  title
-                  subTitle
-                  id
-                  image {
-                    url
+                  images {
+                    title
+                    subTitle
+                    details
+                    id
+                    images {
+                      url
+                      id
+                    }
                   }
-                  details
                 }
               }
             `

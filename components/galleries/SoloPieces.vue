@@ -1,31 +1,38 @@
 <template>
   <section class="gallery">
+    <transition name="fade" mode="out-in">
+      <image-modal
+        v-if="images.length"
+        :images="images"
+        @close="images = []" />
+    </transition>
+
     <ul class="grid-container margin">
       <li
         v-for="(item, index) in soloPieces"
-        :key="item.id"
+        :key="item.images.id"
         class="grid margin top"
         :class="`item-${index + 2}`"
         data-aos="custom-animation">
         <div class="title small">
-          <h3>{{ item.title }}</h3>
-          <h4>{{ item.subTitle }}</h4>
+          <h3>{{ item.images.title }}</h3>
+          <h4>{{ item.images.subTitle }}</h4>
         </div>
 
-        <img @click="$emit('openModal')" :src="item.image.url" alt="">
+        <img @click="images = item.images.images" :src="item.images.images[0].url" alt="">
 
         <div class="title big">
-          <h3>{{ item.title }}</h3>
-          <h4>{{ item.subTitle }}</h4>
+          <h3>{{ item.images.title }}</h3>
+          <h4>{{ item.images.subTitle }}</h4>
         </div>
 
         <div class="description">
-          <p>{{ item.details }}</p>
+          <p>{{ item.images.details }}</p>
         </div>
 
         <div class="enquire-button">
           <a
-            :href="`mailto:hayleybettybutler@gmail.com?subject=${item.title}`"
+            :href="`mailto:hayleybettybutler@gmail.com?subject=${item.images.title}`"
             target="_blank"
             rel="noopener">
             Enquire
@@ -37,32 +44,22 @@
 </template>
 
 <script>
+import imageModal from '@/components/modals/ImageModal'
+
 export default {
   props: {
     soloPieces: { required: true, type: Array }
+  },
+  components: { imageModal },
+  data() {
+    return {
+      images: []
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.title {
-  max-width: 450px;
-
-  &.big {
-    display: none;
-  }
-
-  h3 {
-    font-weight: 600;
-    color: $background;
-  }
-
-  h4 {
-    margin-top: 8px;
-    color: $background;
-  }
-}
-
 p {
   color: $background;
 }
@@ -81,26 +78,6 @@ img {
 
 // desktop
 @media screen and (min-width: 1000px) {
-  .title {
-    max-width: 450px;
-
-    &.big {
-      display: block;
-    }
-
-    &.small {
-      display: none;
-    }
-
-    h3 {
-      margin-top: 16px;
-    }
-
-    h4 {
-      margin: 8px 0 24px 0;
-    }
-  }
-
   img {
     margin: 0;
   }

@@ -7,7 +7,7 @@
 
       <div class="img-container">
         <transition name="fade" mode="out-in">
-          <img :src="images[selected].image.url" alt="" :key="images[selected].image.url">
+          <img :src="images[selected].url" alt="" :key="images[selected].url">
         </transition>
       </div>
 
@@ -36,10 +36,18 @@ export default {
   },
   methods: {
     next() {
-      this.selected ++
+      if((this.selected + 1) < this.images.length) {
+        this.selected ++
+      } else {
+        this.selected = 0
+      }
     },
     prev() {
-      this.selected --
+      if(this.selected > 0) {
+        this.selected --
+      } else {
+        this.selected = this.images.length - 1
+      }
     }
   }
 }
