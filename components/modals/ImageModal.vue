@@ -115,7 +115,7 @@ button {
 
   img {
     width: 90%;
-    max-width: 650px;
+    max-width: 500px;
   }
 }
 
