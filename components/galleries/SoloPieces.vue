@@ -19,7 +19,10 @@
           <h4>{{ item.images.subTitle }}</h4>
         </div>
 
-        <img @click="images = item.images.images" :src="item.images.images[0].url" alt="">
+        <img
+          @click="images = item.images.images"
+          :src="item.images.images[0].url"
+          :alt="`An image of a solo peice titled ${item.images.title}`">
 
         <div class="title big">
           <h3>{{ item.images.title }}</h3>

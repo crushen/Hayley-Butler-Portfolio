@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <section class="gallery">
     <ul>
       <li
@@ -31,12 +31,84 @@
       </li>
     </ul>
   </section>
+</template> -->
+
+
+
+<template>
+  <section class="gallery">
+    <transition name="fade" mode="out-in">
+      <image-modal
+        v-if="images.length"
+        :images="images"
+        @close="images = []" />
+    </transition>
+
+    <ul>
+      <li
+        v-for="exhibition in exhibitions"
+        :key="exhibition.id"
+        class="grid-container margin top">
+        <div
+          class="grid item-1"
+          data-aos="custom-animation">
+          <div class="title">
+            <h3>{{ exhibition.title }}</h3>
+            <h4>{{ exhibition.subTitle }}</h4>
+          </div>
+
+          <div
+            v-if="exhibition.description"
+            class="text">
+            <p>{{ exhibition.description }}</p>
+          </div>
+        </div>
+
+        <div
+          v-for="(image, index) in exhibition.images"
+          :key="image.id"
+          class="grid margin top"
+          :class="`item-${index + 2}`"
+          data-aos="custom-animation">
+          <div class="title small">
+            <h3>{{ image.title }}</h3>
+            <h4>{{ image.subTitle }}</h4>
+          </div>
+
+          <img
+            @click="images = image.images"
+            :src="image.images[0].url"
+            :alt="`An image from the ${exhibition.title} collection, titled ${image.title}`">
+
+          <div class="title big">
+            <h3>{{ image.title }}</h3>
+            <h4>{{ image.subTitle }}</h4>
+          </div>
+
+          <div class="description">
+            <p>{{ image.details }}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
 </template>
 
+
+
+
 <script>
+import imageModal from '@/components/modals/ImageModal'
+
 export default {
   props: {
     exhibitions: { required: true, type: Array }
+  },
+  components: { imageModal },
+  data() {
+    return {
+      images: []
+    }
   }
 }
 </script>
@@ -73,11 +145,7 @@ export default {
 
 img {
   width: 100%;
-  margin-top: 24px;
-
-  &:first-of-type {
-    margin-top: 40px;
-  }
+  margin: 32px 0;
 }
 
 // tablet
@@ -93,11 +161,7 @@ img {
   }
 
   img {
-    margin-top: 32px;
-
-    &:first-of-type {
-      margin-top: 64px;
-    }
+    margin: 40px 0;
   }
 }
 
@@ -132,10 +196,10 @@ img {
       margin: 0;
       padding-left: 40px;
     }
+  }
 
-    // &:nth-of-type(3n) {
-    //   margin-top: 80px;
-    // }
+  img {
+    margin: 0;
   }
 }
 </style>

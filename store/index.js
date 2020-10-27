@@ -44,7 +44,7 @@ export const actions = {
                   id
                   subTitle
                   title
-                  image {
+                  images {
                     title
                     subTitle
                     id
@@ -108,14 +108,19 @@ export const actions = {
             query: `
               {
                 exhibitions {
+                  id
                   title
                   subTitle
-                  images {
-                    url
-                    id
-                  }
-                  id
                   description
+                  images {
+                    id
+                    subTitle
+                    title
+                    details
+                    images {
+                      url
+                    }
+                  }
                 }
               }
             `

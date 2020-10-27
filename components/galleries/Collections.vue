@@ -28,7 +28,7 @@
         </div>
 
         <div
-          v-for="(image, index) in collection.image"
+          v-for="(image, index) in collection.images"
           :key="image.id"
           class="grid margin top"
           :class="`item-${index + 2}`"
@@ -38,7 +38,10 @@
             <h4>{{ image.subTitle }}</h4>
           </div>
 
-          <img @click="images = image.images" :src="image.images[0].url" alt="">
+          <img
+            @click="images = image.images"
+            :src="image.images[0].url"
+            :alt="`An image from the ${collection.title} collection, titled ${image.title}`">
 
           <div class="title big">
             <h3>{{ image.title }}</h3>

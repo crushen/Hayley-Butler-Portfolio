@@ -11,7 +11,7 @@
         </transition>
       </div>
 
-      <div class="controls">
+      <div v-if="images.length > 1" class="controls">
         <button @click="prev" class="left">
           <img src="@/assets/icons/arrow-left.svg" alt="" class="icon">
         </button>
@@ -115,6 +115,7 @@ button {
 
   img {
     width: 90%;
+    max-width: 700px;
   }
 }
 </style>
