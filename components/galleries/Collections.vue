@@ -41,7 +41,8 @@
           <img
             @click="images = image.images"
             :src="image.images[0].url"
-            :alt="`An image from the ${collection.title} collection, titled ${image.title}`">
+            :alt="`An image from the ${collection.title} collection, titled ${image.title}`"
+            class="img-btn">
 
           <div class="title big">
             <h3>{{ image.title }}</h3>

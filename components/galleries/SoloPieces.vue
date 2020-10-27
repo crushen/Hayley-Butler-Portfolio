@@ -22,7 +22,8 @@
         <img
           @click="images = item.images.images"
           :src="item.images.images[0].url"
-          :alt="`An image of a solo peice titled ${item.images.title}`">
+          :alt="`An image of a solo peice titled ${item.images.title}`"
+          class="img-btn">
 
         <div class="title big">
           <h3>{{ item.images.title }}</h3>

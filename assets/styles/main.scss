@@ -122,6 +122,11 @@ ul {
   }
 }
 
+.img-btn,
+button {
+  cursor: pointer;
+}
+
 // tablet
 @media screen and (min-width: 600px) {
   // font & text

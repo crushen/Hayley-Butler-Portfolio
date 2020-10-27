@@ -115,7 +115,20 @@ button {
 
   img {
     width: 90%;
-    max-width: 700px;
+    max-width: 650px;
+  }
+}
+
+// desktop
+@media screen and (min-width: 1000px) {
+  button {
+    &.close {
+      right: 15%;
+    }
+  }
+
+  .controls {
+    padding: 0 15%;
   }
 }
 </style>
