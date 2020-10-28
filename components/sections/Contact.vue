@@ -1,17 +1,19 @@
 <template>
   <section id="contact" class="section-padding whole-screen dark-page">
     <div class="content">
+      <img src="@/assets/logo.png" alt="" class="logo">
       <div class="section-title">
         <h2>CONTACT</h2>
         <div class="line" />
       </div>
 
-      <div class="margin top flex-container" data-aos="custom-animation">
+      <div class="margin top bottom flex-container" data-aos="custom-animation">
         <div>
-          <p>Based in Tooting, South London.</p> 
+          <p>Open for commissions!</p>
+          <p>Please contact me to discuss ordering your very own made to order piece of art. The process is fully collaborative, we will discuss your colour scheme, finish and budget. I look forward to hearing from you.</p> 
         </div>
 
-        <div>
+        <div class="contact">
           <p>Phone: <a href="tel:07429545446" target="_blank" rel="noopener">07429545446</a></p>
           <p>Email: <a href="mailto:hayleybettybutler@gmail.com" target="_blank" rel="noopener">hayleybettybutler@gmail.com</a></p>
           <p>Instagram: <a href="https://www.instagram.com/hayloveart/?hl=en" target="_blank" rel="noopener">@hayloveart</a></p>
@@ -32,9 +34,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.content {
+  position: relative;
+}
+
+.logo {
+  width: 80px;
+  position: absolute;
+  top: -35px;
+  right: 0;
+}
+
 p {
   &:not(:first-of-type) {
-    margin-top: 24px;
+    margin-top: 20px;
   }
 }
 
@@ -44,12 +57,18 @@ p {
   }
 }
 
+.contact {
+  margin-top: 20px;
+}
+
 a {
   color: $light-font;
 }
 
 .flex-container {
-  height: 55vh;
+  min-height: 55vh;
+  padding-bottom: 64px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -57,11 +76,19 @@ a {
 }
 
 .developer-link {
-  padding-top: 60px;
+  position: absolute;
+  bottom: 0;
 
   p, a {
     font-size: 12px;
     color: darken($color: $light-font, $amount: 20%);
+  }
+}
+
+// desktop
+@media screen and (min-width: 1000px) {
+  .flex-container {
+    padding-bottom: 100px;
   }
 }
 </style>
