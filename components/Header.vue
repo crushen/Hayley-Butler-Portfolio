@@ -1,13 +1,9 @@
 <template>
   <header>
-    <div class="background" :style="{backgroundImage: `url(${require('@/assets/backgrounds/background.webp')})`}" />
+    <div class="background" :style="{backgroundImage: `url(${require('@/assets/backgrounds/background-3.jpeg')})`}" />
     <div class="overlay" />
 
     <div class="content">
-      <!-- <div class="logo">
-        <img src="@/assets/logos/white.png" alt="">
-      </div> -->
-
       <h1>{{ output1 }} <br> {{ output2 }}</h1>
     </div>
   </header>
